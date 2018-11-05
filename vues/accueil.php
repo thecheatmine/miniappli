@@ -11,13 +11,13 @@
 <div class="bloc">
     <h2>Alertes en cours</h2>
     <p class="alerte_rouge">Fisk Hell's Kitchen machin</p>
-    <h3>Spiderman</h3>
+    <h3>Spider-Man</h3>
     <p class="alerte_rouge">Fisk Hell's Kitchen machin</p>
-    <h3>Spiderman</h3>
+    <h3>Spider-Man</h3>
 </div>
 
 <div class="bloc">
     <h2>Dernières affaires réglées</h2>
     <p class="alerte_verte">Fisk Hell's Kitchen machin</p>
-    <h3>Spiderman</h3>
+    <h3>Spider-Man</h3>
 </div>
