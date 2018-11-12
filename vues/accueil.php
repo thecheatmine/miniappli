@@ -10,14 +10,16 @@
 
 <div class="bloc">
     <h2>Alertes en cours</h2>
-    <p class="alerte_rouge">Fisk Hell's Kitchen machin</p>
+    <p class="alerte_rouge">Le Tesseract entre les mains de l'Hydra</p>
+    <h3>Captain America</h3>
+    <p class="alerte_rouge">Crâne Rouge aperçu à New York</p>
     <h3>Spider-Man</h3>
-    <p class="alerte_rouge">Fisk Hell's Kitchen machin</p>
-    <h3>Spider-Man</h3>
+    <p class="alerte_rouge">Ant-Man coincé dans le monde quantique</p>
+    <h3>La Guêpe</h3>
 </div>
 
 <div class="bloc">
     <h2>Dernières affaires réglées</h2>
-    <p class="alerte_verte">Fisk Hell's Kitchen machin</p>
-    <h3>Spider-Man</h3>
+    <p class="alerte_verte">Wilson Fisk arrêté à Hell's Kitchen</p>
+    <h3>Daredevil</h3>
 </div>
