@@ -92,13 +92,24 @@ nav a img {
 .bloc h2 {
     display: inline-block;
     font-weight: 700;
-    padding: 0 26px;
+    padding: 10px 26px;
 }
 
 .bloc h3 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    text-align: left;
+}
+
+.bloc h3:not(:first-of-type){
+    margin: 16px 0 0 0;   
+}
+
+.bloc a {
+    font-size: 0.9rem;
+    font-weight: 400;
     text-align: right;
+    text-decoration: underline;
 }
 
 .bloc p {

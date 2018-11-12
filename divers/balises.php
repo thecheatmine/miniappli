@@ -25,13 +25,19 @@ function addLike($id) {
 }
 
 
+//Fonction qui retire un like à un utilisateur avec un id donné
+function lessLike($id) {
+    
+}
+
+
 //Fonction qui ajoute quelqu'un avec un id donné comme ami
-function addFriend($id) {
+function addFriend($id, $id2) {
 
 }
 
 
 //Fonction qui vérifie si vous êtes l'ami de quelqu'un avec un id donné
-function checkIfFriend($id) {
-    
+function checkIfFriend($id, $id2) {
+
 }

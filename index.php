@@ -41,13 +41,14 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 <nav>
 <?php
         if (isset($_SESSION['id'])) {
-            echo "<a href='#'><img src='img/logoaccueil.jpg' /></a>";
-            echo "<a href='#'><img src='img/iconprofil.jpg' /></a>";
+            echo "<a href='index.php'><img src='img/iconeaccueil.jpg' /></a>";
+            echo "<a href='index.php?action=profil&id=".$_SESSION['id']."'><img src='img/iconprofil.jpg' /></a>";
             echo "<a href='index.php?action=deconnexion'><img src='img/logologout.jpg' /></a>";
         } else {
-            echo "<a href='#'><img src='img/logoaccueil.jpg' /></a>";
+            echo "<a href='#'><img src='img/iconeaccueil.jpg' /></a>";
             echo "<a href='index.php?action=login'><img src='img/logologin.jpg' /></a>";
             echo "<a href='index.php?action=signup'>Sign Up</a>";
+        }
         ?>
 </nav>
 

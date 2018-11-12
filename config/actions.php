@@ -9,5 +9,5 @@ $listeDesActions = array(
     "newsignup" => "traitement/newsignup.php",
     "connexion" => "traitement/connexion.php",
     "deconnexion" => "traitement/deconnexion.php",
-    "profil" => "traitement/profil.php"
+    "profil" => "vues/profil.php"
 );
