@@ -50,7 +50,7 @@
     <?php
     // On veut que le formulaire est été soumis et que l'année est un nombre
     if($ok) { 
-        $sql = "SELECT * FROM ecrit WHERE idAuteur=?"; // 
+        $sql = "SELECT * FROM ecrit WHERE idAmi=?"; // 
         $query = $pdo->prepare($sql); // Etpae 1 : On prépare la requête
                                     //  et celle-ci a un paramètre optionnel
         
@@ -65,6 +65,7 @@
             echo "<p>".$line['contenu'];
             if($line['idAuteur'] == $_SESSION['id']) echo "<br><a href='/index.php?action=supprPost&idPost=".$line['id']."&idAuteur=".$line['idAuteur']."'>Supprimer</a>";
             echo "</p>";
+            echo "<h4>Date et auteur</h4>";
         }       
     }
     ?>
