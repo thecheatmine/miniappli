@@ -18,12 +18,16 @@ $line = $query->fetch();
 if($line){
     $_SESSION['id'] = $line['id'];
     $_SESSION['login'] = $line['login'];
-    header('Location: /~valentin.wojtasinski/miniappli/index.php');
+    if(isset($_POST['connexion-auto'])){
+        setcookie ("connexion-auto",$line['id'] , time() + 365*24*3600);
+    }
+    header('Location: index.php');
     exit();
+
 }
 else{
-    echo "Mauvais couple identifiants";
-    header('Location: /~valentin.wojtasinski/miniappli/index.php?action=login');
+    echo "Mauvais couple d'identifiants";
+    header('Location: index.php?action=login');
     exit();
 }
 // sinon on crée les variables de session $_SESSION['id'] et $_SESSION['login'] et on va à la page d'accueil

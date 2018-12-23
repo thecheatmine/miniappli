@@ -2,15 +2,15 @@
 // Script connexion.php utilisé pour la connexion à la BD
 
 
-$host="ipabdd.iut-lens.univ-artois.fr"; // le chemin vers le serveur (localhost dans 99% des cas)
+$host="localhost"; // le chemin vers le serveur (localhost dans 99% des cas)
 
 $db="valentinwojtasinski"; // le nom de votre base de données.
             // A l IUT, 3 possibilité prenomnom prenomnom1... 
 
-$user="valentin.wojtasinski"; // nom d utilisateur pour se connecter
+$user="root"; // nom d utilisateur pour se connecter
               // A l iut prenom.nom	
 
-$passwd="axDgQbJd"; // mot de passe de l utilisateur pour se connecter
+$passwd=""; // mot de passe de l utilisateur pour se connecter
             // A l iut, généré automatiquement
 
 try {

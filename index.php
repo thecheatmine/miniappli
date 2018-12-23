@@ -1,12 +1,22 @@
 <?php
 
-include("config/config.php");
-include("config/bd.php"); // commentaire
-include("divers/balises.php");
-include("config/actions.php");
-session_start();
-ob_start(); // Je démarre le buffer de sortie : les données à afficher sont stockées
+  include("config/config.php");
+  include("config/bd.php"); // commentaire
+  include("divers/balises.php");
+  include("config/actions.php");
+  session_start();
+  ob_start(); // Je démarre le buffer de sortie : les données à afficher sont stockées
 
+  if(isset($_COOKIE["connexion-auto"]) && !isset($_SESSION['id'])){
+    $sql = "SELECT login FROM user WHERE id=?";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($_COOKIE["connexion-auto"]));
+    $line = $query->fetch();
+    $_SESSION['id'] = $_COOKIE["connexion-auto"];
+    $_SESSION['login'] = $line['login'];
+    message("Vous avez été reconnecté avec succès");
+    header('Location: index.php');
+  }
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +26,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Portail Avengers - Accueil</title>
+    <title>Portail Avengers</title>
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="./css/bootstrap.min.css" rel="stylesheet"> -->
@@ -31,7 +41,14 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 <body>
 
 <?php
-
+if(isset($_SESSION['info'])){
+  ?>
+  <div id="informations">
+    <?php echo $_SESSION['info']; ?>
+  </div>
+  <?php
+  unset($_SESSION['info']);
+}
 ?>
 
 
@@ -45,9 +62,9 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             echo "<a href='index.php?action=profil&id=".$_SESSION['id']."'><img src='img/iconprofil.jpg' /></a>";
             echo "<a href='index.php?action=deconnexion'><img src='img/logologout.jpg' /></a>";
         } else {
-            echo "<a href='#'><img src='img/iconeaccueil.jpg' /></a>";
+            echo "<a href='index.php'><img src='img/iconeaccueil.jpg' /></a>";
+            echo "<a href='index.php?action=signup'><img src='img/iconesignup.jpg' /></a>";
             echo "<a href='index.php?action=login'><img src='img/logologin.jpg' /></a>";
-            echo "<a href='index.php?action=signup'>Sign Up</a>";
         }
         ?>
 </nav>

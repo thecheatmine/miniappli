@@ -9,5 +9,10 @@ $listeDesActions = array(
     "newsignup" => "traitement/newsignup.php",
     "connexion" => "traitement/connexion.php",
     "deconnexion" => "traitement/deconnexion.php",
-    "profil" => "vues/profil.php"
+    "profil" => "vues/profil.php",
+    "newpost" => "traitement/newpost.php",
+    "rmPost" => "traitement/removepost.php",
+    "upload" => "traitement/upload.php",
+    "like" => "traitement/updatelike.php",
+    "update" => "traitement/updatestatus.php"
 );

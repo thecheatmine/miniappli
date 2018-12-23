@@ -26,6 +26,15 @@ body {
     z-index: -1;
 }
 
+#informations {
+  width: 100%;
+  display: block;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
 header {
     background-color: #4EAEDF;
     padding: 30px;
@@ -47,8 +56,8 @@ nav {
 nav a {
     display: grid;
     background-color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     overflow: hidden;
     border-radius: 100%;
     justify-content: center;
@@ -56,7 +65,7 @@ nav a {
 }
 
 nav a img {
-    height: 30px;
+    height: 50px;
 }
 
 #notification_bloc {
@@ -75,7 +84,7 @@ nav a img {
 }
 
 #notification_bloc h2 {
-    font-size: 2rem;
+    font-size: 24px;
 }
 
 #notification_bloc h3 {
@@ -92,24 +101,35 @@ nav a img {
 .bloc h2 {
     display: inline-block;
     font-weight: 700;
-    padding: 10px 26px;
+    margin: 10px 26px;
 }
 
 .bloc h3 {
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: 700;
     text-align: left;
+    margin-left: 16px;
 }
 
 .bloc h3:not(:first-of-type){
-    margin: 16px 0 0 0;   
+    margin: 16px 0 0 16px;   
+}
+
+.bloc h4 {
+  text-align: right;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .bloc a {
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 700;
     text-align: right;
     text-decoration: underline;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    color: #fff;
 }
 
 .bloc p {
@@ -140,7 +160,7 @@ p.alerte_verte {
 
 .bloc form label {
     font-weight: 700;
-    font-size: 1.25em;
+    font-size: 18px;
     padding: 0 15px;
 }
 
@@ -152,15 +172,25 @@ p.alerte_verte {
     border-radius: 4px;
 }
 
-.bloc form input {
+.bloc form input, textarea {
     margin: 15px;
     padding: 10px;
     background-color: #fff;
     border: solid 2px #ddf1fa;
     border-radius: 4px;
     color: #0D202E;
-    font-size: 1.55em;
+    font-size: 20px;
     box-shadow: 0 2.5px 5px rgba(3, 24, 29, 0.2);
+}
+
+textarea {
+  min-width: 350px;
+  max-width: 450px;
+}
+
+.bloc form input[type="search"] {
+  width: 300px;
+  text-align: center;
 }
 
 .bloc form input[type="submit"] {
@@ -243,7 +273,7 @@ p.alerte_verte {
     z-index: -1;
     position: fixed;
     background: url('../img/thanos.jpg');
-    background-size: 2000px;
+    background-size: 3000px;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -290,6 +320,61 @@ p.alerte_verte {
 
     header {
       padding: 60px;
-      font-size: 1.5rem;
+      font-size: 35px;
     }
 }
+
+.button-direct{
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.avatar {
+  margin:auto;
+  width: 300px;
+  max-width: 500px;
+  border-radius: 50%;
+  height: 300px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.img-profil img{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+
+.nom-profil {
+   padding-bottom: 10px;
+}
+
+#avatar form {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#avatar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.avatar {
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+.avatar:hover{
+    border-radius: 25%;
+    height: 300px;
+    width: 300px;
+
+}
+

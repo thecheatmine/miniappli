@@ -6,7 +6,7 @@
         <label for="password">Mot de passe</label>
         <input id="password" type="password" name="password">
         <label class="container">Se souvenir de moi
-            <input type="checkbox">
+            <input type="checkbox" name="connexion-auto">
             <span class="checkmark"></span>
         </label>
         <input type="submit">
